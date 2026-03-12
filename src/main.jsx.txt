@@ -1,0 +1,85 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+```
+
+---
+
+**File 5 — move your prototype into the `src` folder**
+
+Take the `wamido_prototype.jsx` file you downloaded in Step 1, move it into the `src` folder, and **rename it** to:
+```
+App.jsx
+```
+
+Your final folder structure should look exactly like this:
+```
+wamido-prototype/
+├── index.html
+├── package.json
+├── vite.config.js
+└── src/
+    ├── main.jsx
+    └── App.jsx
+```
+
+---
+
+## Step 5 — Install & Build the Project
+
+Open your Terminal (Mac) or Command Prompt (Windows).
+
+Navigate into your project folder. Type this and press Enter — replace the path with wherever you saved your folder:
+
+**On Mac:**
+```
+cd ~/Desktop/wamido-prototype
+```
+
+**On Windows:**
+```
+cd C:\Users\YourName\Desktop\wamido-prototype
+```
+
+Now install the dependencies (this downloads React and everything needed). Type and press Enter:
+```
+npm install
+```
+You'll see a lot of text scrolling — that's normal. Wait until it stops and you see your cursor again. Takes about 1-2 minutes.
+
+Now build the project:
+```
+npm run build
+```
+When it finishes you'll see something like `✓ built in 10s` and a new folder called `dist` will appear inside your project folder.
+
+That `dist` folder is what you'll upload to Vercel.
+
+---
+
+## Step 6 — Create a Free Vercel Account
+
+- Go to **vercel.com**
+- Click **"Sign Up"**
+- Choose **"Continue with Email"** — no GitHub needed
+- Enter your email address (use hello@wamido.org or any email)
+- Check your inbox and click the confirmation link they send
+- You'll land on the Vercel dashboard
+
+---
+
+## Step 7 — Deploy by Drag and Drop
+
+- On the Vercel dashboard, click **"Add New"** → **"Project"**
+- You'll see an option at the bottom that says **"Or deploy an existing project"** — look for the drag-and-drop area, it may say **"Drag and drop a folder"** or there'll be an upload button
+- **Drag your `dist` folder** (not the whole `wamido-prototype` folder — just the `dist` folder inside it) into that area
+- Vercel will process it for about 30-60 seconds
+- When it's done you'll see a green tick and a URL like:
+```
+wamido-prototype-xyz.vercel.app
